@@ -1,7 +1,7 @@
 package com.security;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import lombok.Data;
-import tacos.User;
+import com.User;
 
 @Data
 public class RegistrationForm {
