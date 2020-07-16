@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                dir('ianstest')
                 echo 'Building... 1 2 3 using mvnw'
                 sh './mvnw site'
             }
