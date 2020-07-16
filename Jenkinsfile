@@ -1,10 +1,13 @@
 pipeline {
     agent any
-
+    environment {
+                PATH = $PATH:.
+            }
     stages {
         stage('Build') {
             steps {
-                echo 'Building... 1 2 3'
+                echo 'Building... 1 2 3 using mvnw'
+                sh './mvnw site'
             }
         }
         stage('Test') {
@@ -14,8 +17,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying... 1 2 3 4'
+                echo 'Deploying (at some point)... 1 2 3 4'
             }
         }
     }
 }
+
