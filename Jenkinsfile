@@ -2,6 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Build') {
+            dir('ianstest')
             steps {
                 echo 'Building... 1 2 3 using mvnw'
                 sh './mvnw site'
