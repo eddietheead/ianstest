@@ -1,23 +1,26 @@
-
 pipeline {
-    agent any
-    stages {
-            dir('ianstest') {
-                 stage('Build') {
-                   sh 'pwd'
-                   echo 'Building... 1 2 3 using mvnw'
-                   sh './mvnw site'
-                }
-            }
-        stage('Test') {
-            steps {
-                echo 'Testing... 1 2 3'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying (at some point)... 1 2 3 4'
-            }
-        }
+agent any
+
+stages {
+  stage('build') {
+    steps {
+      // One or more stages need to be included within the stages block.
+      dir("ianstest")
+      echo 'building... 1 2 3'
+      sh "mvnw site"
     }
+  }
+  stage('deploy') {
+    steps {
+      echo 'deploying... 1 2 3'
+      // One or more steps need to be included within the steps block.
+    }
+  }
+  stage('testing') {
+    steps {
+      echo 'testing... 1 2 3'
+      // One or more steps need to be included within the steps block.
+    }
+  }
+
 }
