@@ -3,27 +3,20 @@ agent any
 
 stages {
 
-  stage('build') {
+  stage('1. Build') {
     steps {
-      // One or more stages need to be included within the stages block.
-       dir('ianstest') 
       echo 'building... 1 2 3'
-      sh "mvnw site"
+      sh 'mvnw site'
     }
   }
-
-  stage('deploy') {
-    steps {
-      echo 'deploying... 1 2 3'
-      // One or more steps need to be included within the steps block.
-    }
-  }
-
-  stage('testing') {
-    steps {
-      echo 'testing... 1 2 3'
-      // One or more steps need to be included within the steps block.
-    }
-  }
-
+  stage('2. Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+  stage('3. Deploy') {
+            steps {
+                echo 'Hello World'
+            }
+        }
 }
