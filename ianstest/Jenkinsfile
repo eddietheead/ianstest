@@ -2,11 +2,11 @@ pipeline {
     agent any
     stages {
             stage('Build') {
-                dir('ianstest') {
+                   dir('ianstest')
                    sh 'pwd'
                    echo 'Building... 1 2 3 using mvnw'
                    sh './mvnw site'
-                }
+                
             }
             stage('Test') {
                 steps {
