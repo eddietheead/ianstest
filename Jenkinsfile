@@ -6,6 +6,7 @@ stages {
   stage('1. Build') {
     steps {
       dir('ianstest') {
+        sh("pwd")
         echo 'building... 1 2 3'
         sh 'mvnw site'
       }
