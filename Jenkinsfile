@@ -8,7 +8,7 @@ stages {
       dir('ianstest') {
         sh("pwd")
         echo 'building... 1 2 3'
-        sh 'mvnw site'
+        sh './mvnw site'
       }
     }
   }
