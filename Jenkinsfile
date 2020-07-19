@@ -5,6 +5,7 @@ stages {
 
   stage('1. Build') {
     steps {
+      dir('ianstest')
       echo 'building... 1 2 3'
       sh 'mvnw site'
     }
