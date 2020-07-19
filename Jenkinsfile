@@ -19,4 +19,5 @@ stages {
                 echo 'Hello World'
             }
         }
+  }
 }
